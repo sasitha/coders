@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"  class="ng-app:Aces.app" ng-cloak id="ng-app" ng-app="Aces.app" ng-controller="NavigationController">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ACES Coders</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="home/home.css">
+    <link rel="stylesheet" href="common/app.css">
+    <link href='http://www.google.com/fonts#UsePlace:use/Collection:Droid+Serif' type='text/css'>
+
+    <link rel="icon" type="image/png" href="common/images/aces-favicon.png"/>
+</head>
+<body class="col-lg-12" >
+
+
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/angular/angular-touch.js"></script>
+<script src="lib/bootbox/bootbox.js"></script>
+<script src="lib/uibootstap/ui-bootstrap-tpls-0.10.0.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/uderscore/underscore.min.js"></script>
+<script src='lib/googlemaps/angular-google-maps.min.js'></script>
+<script src="lib/social/angular-socialshare.min.js"></script>
+<script src="lib/social/socialite.min.js"></script>
+
+
+<script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+<div class="row" id="row1">
+    <nav class="navbar navbar-static-top content col-lg-10 col-sm-offset-1" style="margin-bottom: -20px">
+        <div class="container-fluid">
+            <div class="navbar-default">
+                <!--<a class="navbar-brand hackathon-logo " style="margin-top: 10px" href="#/home"></a>-->
+                <button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target="#navbar-collapse"
+                        style="margin-right: 0px">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-text">
+                    <li><a  href="#/home">HOME</a>
+                    </li>
+                    <li><a href="#/rules">RULES</a>
+                    </li>
+                    <li><a  href="#/register">REGISTER</a>
+                    </li>
+                    <li ng-hide="true"><a  href="">BLOG</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="row" ng-hide="hideHomeImage" id="row2">
+    <div class="col-lg-10 col-sm-offset-1">
+        <hr>
+    </div>
+    <!--<img class="col-lg-10 col-sm-offset-1" src="common/images/aces_coders.png">-->
+    <img style="width: 100%; height:auto" src="common/images/aces_coders.png">
+</div>
+
+<div class="row" id="row3">
+    <div id="content" class="content col-lg-10 col-sm-offset-1" >
+        <ng-view></ng-view>
+    </div>
+
+</div>
+<div class="row" ng-hide="hideHomeImage">
+    <div class="col-lg-10 col-sm-offset-1">
+        <hr>
+    </div>
+    <div class="col-lg-10 col-sm-offset-1">
+        <div class="row">
+            <div class="col-xs-8">
+                <h3>Platinum Sponsors</h3>
+                <br/>
+                <a href="http://www.99xtechnology.com/" target="_blank"><img style="width: 250px" src="common/images/99Xtechnology%20logo%20transparent.png" alt=""/></a>
+            </div>
+            <div class="col-xs-4">
+                <br/>
+                <a href="http://www.atrenta.com/" target="_blank"><img style="width: 235px; margin-left: -300px; margin-top: 35px;"
+                                                                   src="common/images/atrentalogo.jpg" alt=""/></a>
+            </div>
+        </div>
+        <div class="row" ng-show="false">
+            <div class="col-xs-8">
+                <h3>Gold Sponsors</h3>
+                <br/>
+                <a href="http://www.99xtechnology.com/" target="_blank"><img style="width: 250px" src="common/images/99Xtechnology%20logo%20transparent.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8" ng-show="false">
+                <h3>Silver Sponsors</h3>
+                <br/>
+                <a href="http://www.99xtechnology.com/" target="_blank"><img style="width: 250px" src="common/images/99Xtechnology%20logo%20transparent.png" alt=""/></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row" style="margin-top: 100px; font-size: 13px" ng-show="false" id="row4">
+    <div style="height: 600px; width: 100%; background-color: #f6f6f6">
+        <div class="content col-lg-10 col-sm-offset-1 content-body " style="margin-top: 150px">
+            <div class="row" ng-show="false">
+                <div class="col-xs-6" style="height: 300px; font-size: 13px">LATEST TWEETS
+                    <br>
+                    <div class="col-sm-1">
+                        <hr/>
+                    </div>
+                    <br/>
+                    <div style="font-size: 13px">
+                        pending tweets ...
+                    </div>
+                </div>
+
+                <div class="col-xs-6" style="height: 300px; font-size: 13px" >RECENT BLOG POSTS
+                    <br>
+                    <div class="col-sm-1">
+                        <hr/>
+                    </div>
+                    <br/>
+                    <div style="font-size: 13px">
+                        pending blog posts ...
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <hr>
+                <div class="navbar-left" ng-show="true">
+                    <div style="display: inline-block">
+                        <a href="http://twitter.com/share" class="socialite twitter-share" data-text="Socialite.js" data-url="http://sociasfdsdflitejs.com" data-count="vertical" rel="nofollow" target="_blank"><span class="vhidden">Share on Twitter</span></a>
+                    </div>
+                    <div style="display: inline-block">
+                        <a href="http://www.facebook.com/sharer.php?u=http://www.socialitejs.com&t=Socialite.js" class="socialite facebook-like" data-href="http://socialitejs.com" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"><span class="vhidden">Share on Facebook</span></a>
+                    </div>
+                    <div style="display: inline-block">
+                        <a href="https://plus.google.com/share?url=http://socialitejs.com" class="socialite googleplus-one" data-size="tall" data-href="http://socialitejs.com" rel="nofollow" target="_blank"><span class="vhidden">Share on Google+</span></a>
+                    </div>
+                </div>
+                <div class="navbar-right" style="font-size: 13px">
+                    <span class="glyphicon glyphicon-copyright-mark"></span> Copyright 2014 <a href="">ACES</a>  UoP. All Rights Reserved
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="height: 150px; width: 100%"></div>
+
+</div>
+
+<div class="row" style="margin-top: 100px; font-size: 13px" ng-show="true" id="row5">
+    <div style="height: 200px; background-color: #f6f6f6">
+        <div class="content col-lg-10 col-sm-offset-1 content-body " style="margin-top: 50px">
+            <div class="row col-lg-12" style="font-size: 13px">
+                Contact Us :
+                <br/>
+                <div class="col-lg-4" >
+                    <div ><h5>Ajitha</h5></div>
+                    <div >
+                    <span class="glyphicon glyphicon-phone-alt" style="display: inline-block">
+                        0713-10-72-82
+                    </span>
+                    <span class="glyphicon glyphicon-envelope">
+                        ajitha.samarasinghe@gmail.com
+                    </span>
+                    </div>
+                </div>
+                <div class="col-lg-4" >
+                    <div ><h5>Sasitha</h5></div>
+                    <div >
+                    <span class="glyphicon glyphicon-phone-alt" style="display: inline-block">
+                        0718-39-94-55
+                    </span>
+                    <span class="glyphicon glyphicon-envelope">
+                        sasithamadushanka@gmail.com
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="navbar-right" style="font-size: 13px;">
+                    <span class="glyphicon glyphicon-copyright-mark"></span> Copyright 2014 <a href="">ACES</a>  UoP. All Rights Reserved
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+<script src="common/navigationController.js"></script>
+<script src="home/homeController.js"></script>
+<script src="rules/rulesController.js"></script>
+<script src="about/aboutController.js"></script>
+
+</body>
+</html>

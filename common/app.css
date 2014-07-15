@@ -1,0 +1,87 @@
+.hackathon-logo{
+background-image:url('images/hakathon-logo.png');
+    width: 215px;
+    background-repeat: no-repeat;
+}
+.aces-logo{
+    background-image:url('images/aces_logo.PNG');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.page-block{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.home-image{
+    margin-bottom: 40px !important;
+}
+
+.content-body{
+    font-size: 18px;
+    line-height: 28px;
+}
+.content-header-1{
+    font-size: 24px;
+    line-height: 35px;
+}
+hr {
+    border: none;
+    height: 1px;
+    color: #acacac;
+    background-color: #acacac;
+    }
+.content-body-sm{
+    font-size: 13px;
+    line-height: 16px;
+}
+.footer {
+    height: 15px;
+    font-size: x-small !important;
+    color: #5bc0de;
+    text-align: right; !important;
+    padding-right: 5px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #FFF;
+}
+a {
+    color: #797979;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: #77ae61;
+    text-decoration: none;
+}
+.text-bold{
+    font-weight: bold;
+}
+.navbar-text{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.agenda-time{
+    font-size: 13px;
+    display: inline-block;
+}
+.agenda-text{
+    font-size: 13px;
+    display: inline-block;
+}
+.agenda-seperator{
+    padding: 2px;
+    display: inline-block;
+}
+div#navbar-collapse.navbar-collapse.collapse.in{
+    margin-right: 50px;
+}
